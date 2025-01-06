@@ -138,7 +138,7 @@ public class RunMatsim4Munich{
 					@Override public PlanStrategy get() {
 						final PlanStrategyImpl.Builder builder = new PlanStrategyImpl.Builder(new RandomPlanSelector<>());
 						builder.addStrategyModule(new SubtourModeChoice(sc.getConfig().global().getNumberOfThreads(), availableModes, chainBasedModes, false,
-							  0.5, tripRouterProvider) );
+							  //0.5, tripRouterProvider) );
 						builder.addStrategyModule(new ReRoute(sc, tripRouterProvider) );
 						return builder.build();
 					}
